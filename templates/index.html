@@ -3,12 +3,22 @@
 <head>
     <title>Language Detection</title>
 </head>
-<body>
-    <h1>Language Detection</h1>
-    <form action="/detect" method="POST">
-        <label for="text">Enter Text:</label>
-        <input type="text" name="text" id="text" required>
-        <button type="submit">Detect Language</button>
-    </form>
+<body style="background: #000;">
+    <div class="login">
+        <h1>Language Detection</h1>
+        <form action="{{ url_for('detect') }}" method="post">
+            <input type="text" name="text" placeholder="Enter your text", id="text", required="required" />
+            <br>
+            <p>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Detect Language</button></p>
+        </form>
+
+        <br>
+        <br>
+        <h4 style="color: #fb3f3f;">{{ prediction_text }}</h4>
+
+    </div>    
 </body>
+
+
 </html>
