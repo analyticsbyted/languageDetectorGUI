@@ -14,7 +14,7 @@ def home():
 
 @app.route("/detect", methods=["POST"])
 def detect_language():
-    text = = [str(x) for x in request.form.values()] request.form.get("text")
+    text = [str(x) for x in request.form.values()] request.form.get("text")
     # Perform language detection logic here
     # Call the FastAPI backend or use your existing code
     
